@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 from sklearn.datasets import load_iris
 
-# Load Iris dataset
+# Load Iris Dataset
 
 
 def load_dataset():
@@ -14,7 +14,6 @@ def load_dataset():
     df["species_name"] = df.apply(
         lambda x: str(iris.target_names[int(x["species"])]), axis=1
     )
-    return df
 
 
 if __name__ == "__main__":
