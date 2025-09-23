@@ -1,5 +1,10 @@
+from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
 import pandas as pd
 from sklearn.datasets import load_iris
+
+# Load Iris dataset
 
 
 def load_dataset():
@@ -15,3 +20,30 @@ def load_dataset():
 if __name__ == "__main__":
     iris_df = load_dataset()
     print(iris_df.head())
+
+# Train a logistic Regression Model
+
+
+def train(df):
+    X_train, X_test, y_train, y_test = train_test_split(
+        df.iloc[:, :-1], df["species"], test_size=0.2, random_state=42
+    )
+
+    model = LogisticRegression(max_iter=200)
+    model.fit(X_train, y_train)
+
+    return model, X_train, X_test, y_train, y_test
+
+
+def get_accuracy(model, X_test, y_test):
+    predictions = model.predict(X_test)
+    accuracy = accuracy_score(y_test, predictions)
+
+    return accuracy
+
+
+if __name__ == "__main__":
+    iris_df = load_dataset()
+    model, X_train, X_test, y_train, y_test = train(iris_df)
+    accuracy = get_accuracy(model, X_test, y_test)
+    print(f"Accuracy: {accuracy:.2f}")
