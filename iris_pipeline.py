@@ -1,26 +1,6 @@
-from sklearn.metrics import accuracy_score
-from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-import pandas as pd
-from sklearn.datasets import load_iris
-
-# Load Iris Dataset
-
-
-def load_dataset():
-    iris = load_iris()
-    df = pd.DataFrame(iris.data, columns=iris.feature_names)
-    df['species'] = iris.target
-    df["species_name"] = df.apply(
-        lambda x: str(iris.target_names[int(x["species"])]), axis=1
-    )
-
-
-if __name__ == "__main__":
-    iris_df = load_dataset()
-    print(iris_df.head())
-
-# Train a logistic Regression Model
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
 
 
 def train(df):
