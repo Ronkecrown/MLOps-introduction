@@ -2,15 +2,13 @@ name: Python CI workflow
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
     paths:
       - '**/*.py'
       - 'requirements.txt'
       - '.github/workflows/**'
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -28,16 +26,16 @@ jobs:
         with:
           python-version: '3.13'
 
-      # Step 3: Upgrade pip and install dependencies (force reinstall to ensure pytest is installed)
+      # Step 3: Upgrade pip and install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install --force-reinstall -r requirements.txt
 
-      # Step 4: List installed packages to debug
+      # Step 4: Debug installed packages
       - name: List installed packages
         run: python -m pip list
 
       # Step 5: Run tests
-      - name: Run pytest
+      - name: Run tests
         run: python -m pytest
