@@ -1,7 +1,24 @@
 from unittest.mock import MagicMock
 import pytest
 from fastapi.testclient import TestClient
+
 from main import app, ml_models
+
+
+@pytest.fixture(autouse=True)
+def setup_ml_models():
+    """Mock ML models before each test."""
+    ml_models["logistic_model"] = MagicMock()
+    ml_models["rf_model"] = MagicMock()
+
+    # Set default predict return values
+    ml_models["rf_model"].predict.return_value = [0]
+    ml_models["logistic_model"].predict.return_value = [-1]
+
+    yield
+
+    # Clear models after test
+    ml_models.clear()
 
 
 def test_root():
@@ -22,17 +39,8 @@ def test_list_models():
     with TestClient(app) as client:
         response = client.get("/models")
         assert response.status_code == 200
-        assert response.json() == {"available_models": [
-            "logistic_model", "rf_model"]}
-
-
-# Populate ml_models with mock objects for testing
-@pytest.fixture(autouse=True)
-def mock_ml_models():
-    ml_models["logistic_model"] = MagicMock()
-    ml_models["logistic_model"].predict.return_value = [1]
-    ml_models["rf_model"] = MagicMock()
-    ml_models["rf_model"].predict.return_value = [0]
+        assert set(response.json()["available_models"]) == {
+            "logistic_model", "rf_model"}
 
 
 def test_predict_valid_model():
@@ -64,9 +72,7 @@ def test_predict_invalid_model():
         assert response.status_code == 422
 
 
-def test_predict_mocked():
-    ml_models["logistic_model"].predict.return_value = [-1]
-
+def test_predict_mocked_logistic_model():
     with TestClient(app) as client:
         response = client.post(
             "/predict/logistic_model",
