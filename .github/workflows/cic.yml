@@ -15,32 +15,29 @@ on:
 
 jobs:
   test:
-    name: Run Tests
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout code
+      # Step 1: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       # Step 2: Set up Python 3.13
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.13"
+          python-version: '3.13'
 
-      # Step 3: Upgrade pip and install dependencies
+      # Step 3: Upgrade pip and install dependencies (force reinstall to ensure pytest is installed)
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          python -m pip install --force-reinstall -r requirements.txt
 
-      # Step 4: Verify pytest is installed
-      - name: Verify pytest
-        run: |
-          python -m pytest --version
+      # Step 4: List installed packages to debug
+      - name: List installed packages
+        run: python -m pip list
 
-      # Step 5: Run tests using pytest
-      - name: Run tests
-        run: |
-          python -m pytest
+      # Step 5: Run tests
+      - name: Run pytest
+        run: python -m pytest
