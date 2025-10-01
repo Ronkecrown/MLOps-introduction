@@ -62,7 +62,7 @@ def test_predict_invalid_model():
 def mock_models(mocker):
     mock_dict = {"logistic_model": MagicMock, "rf_model": MagicMock}
     m = mocker.patch(
-        "main.ml_models",
+        "app.main.ml_models",
         return_value=mock_dict,
     )
     m.keys.return_value = mock_dict.keys()
