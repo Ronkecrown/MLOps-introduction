@@ -197,6 +197,8 @@ ml_models = {}  # Global dictionary to hold the models.
 
 
 def load_model(path: str):
+    if not path:
+        return None
     model = None
     with open(path, "rb") as f:
         model = pickle.load(f)
@@ -290,7 +292,7 @@ async def predict_secure(
 
     background_tasks.add_task(
         log_prediction,
-        {"model": model_name, "features": iris.model_dump(), "prediction": prediction},
+        {"model": model_name, "features": iris.dict(), "prediction": prediction},
     )
 
     return {"model": model_name, "prediction": int(prediction[0])}
