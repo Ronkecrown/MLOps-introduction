@@ -1,8 +1,4 @@
 name: Python CI workflow
-  uses: actions/setup-python@v4
-  with:
-    python-version: "3.13" 
-
 
 on:
   push:
@@ -27,11 +23,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Python 3.11
+      # Step 2: Set up Python 3.13
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       # Step 3: Upgrade pip and install dependencies
       - name: Install dependencies
