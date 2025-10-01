@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/3d571ad0b1f64950908ddc2dd1b0aca6/artifacts
+end_time: 1758645844999
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3d571ad0b1f64950908ddc2dd1b0aca6
+run_name: treasured-robin-751
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758645842563
+status: 3
+tags: []
+user_id: ronkecrown

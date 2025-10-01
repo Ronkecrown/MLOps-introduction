@@ -1,4 +1,5 @@
 # Load and Explore Data set
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.linear_model import LogisticRegression
 import pandas as pd
@@ -20,7 +21,6 @@ if __name__ == "__main__":
     print(iris_df.head())
 
     # Train a logistic regression model
-    from sklearn.model_selection import train_test_split
 
 
 def train(df):

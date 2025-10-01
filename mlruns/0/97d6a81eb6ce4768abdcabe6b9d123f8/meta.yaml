@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/97d6a81eb6ce4768abdcabe6b9d123f8/artifacts
+deleted_time: 1758645777252
+end_time: 1758645398680
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 97d6a81eb6ce4768abdcabe6b9d123f8
+run_name: tasteful-trout-223
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758645396430
+status: 3
+tags: []
+user_id: ronkecrown

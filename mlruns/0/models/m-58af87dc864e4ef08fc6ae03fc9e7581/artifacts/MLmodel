@@ -1,0 +1,31 @@
+artifact_path: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/models/m-58af87dc864e4ef08fc6ae03fc9e7581/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+is_signature_from_type_hint: false
+mlflow_version: 3.4.0
+model_id: m-58af87dc864e4ef08fc6ae03fc9e7581
+model_size_bytes: 1034
+model_uuid: m-58af87dc864e4ef08fc6ae03fc9e7581
+prompts: null
+run_id: e5348e71f0c44ea18b8df891a188dfcd
+signature:
+  inputs: '[{"type": "double", "name": "sepal length (cm)", "required": true}, {"type":
+    "double", "name": "sepal width (cm)", "required": true}, {"type": "double", "name":
+    "petal length (cm)", "required": true}, {"type": "double", "name": "petal width
+    (cm)", "required": true}, {"type": "long", "name": "species", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-09-23 15:36:18.755426'

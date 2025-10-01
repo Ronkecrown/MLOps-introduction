@@ -1,0 +1,10 @@
+artifact_location: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/models/m-7bf40cb3b2394ce29e60f1f1755406b2/artifacts
+creation_timestamp: 1758642670361
+experiment_id: '0'
+last_updated_timestamp: 1758642672394
+model_id: m-7bf40cb3b2394ce29e60f1f1755406b2
+model_type: null
+name: logistic_regression_model
+source_run_id: 55449214696a40cc9bab78ad76baa07e
+status: 2
+status_message: null

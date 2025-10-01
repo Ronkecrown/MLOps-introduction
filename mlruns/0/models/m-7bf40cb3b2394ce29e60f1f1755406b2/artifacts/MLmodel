@@ -1,0 +1,22 @@
+artifact_path: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/models/m-7bf40cb3b2394ce29e60f1f1755406b2/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.4.0
+model_id: m-7bf40cb3b2394ce29e60f1f1755406b2
+model_size_bytes: 849
+model_uuid: m-7bf40cb3b2394ce29e60f1f1755406b2
+prompts: null
+run_id: 55449214696a40cc9bab78ad76baa07e
+utc_time_created: '2025-09-23 15:51:10.367719'

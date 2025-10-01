@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/e5348e71f0c44ea18b8df891a188dfcd/artifacts
+deleted_time: 1758644260156
+end_time: 1758641781442
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: e5348e71f0c44ea18b8df891a188dfcd
+run_name: valuable-shark-510
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758641778721
+status: 3
+tags: []
+user_id: ronkecrown

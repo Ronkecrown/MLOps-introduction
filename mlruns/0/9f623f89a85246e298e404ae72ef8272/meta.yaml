@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/9f623f89a85246e298e404ae72ef8272/artifacts
+deleted_time: 1758645790031
+end_time: 1758645606767
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 9f623f89a85246e298e404ae72ef8272
+run_name: fortunate-bird-222
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758645604440
+status: 3
+tags: []
+user_id: ronkecrown
