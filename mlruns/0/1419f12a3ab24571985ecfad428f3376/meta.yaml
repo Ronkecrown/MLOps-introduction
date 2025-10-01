@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/1419f12a3ab24571985ecfad428f3376/artifacts
+deleted_time: 1758643961255
+end_time: 1758641608500
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 1419f12a3ab24571985ecfad428f3376
+run_name: bedecked-mule-988
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758641605924
+status: 3
+tags: []
+user_id: ronkecrown

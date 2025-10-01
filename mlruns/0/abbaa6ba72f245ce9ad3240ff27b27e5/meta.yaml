@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/abbaa6ba72f245ce9ad3240ff27b27e5/artifacts
+end_time: 1758645631234
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: abbaa6ba72f245ce9ad3240ff27b27e5
+run_name: vaunted-shad-611
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758645628827
+status: 3
+tags: []
+user_id: ronkecrown

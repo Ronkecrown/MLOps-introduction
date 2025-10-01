@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/811c116aba74473c87131c7cadf353b6/artifacts
+end_time: 1758645697963
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 811c116aba74473c87131c7cadf353b6
+run_name: capable-bear-304
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758645695598
+status: 3
+tags: []
+user_id: ronkecrown

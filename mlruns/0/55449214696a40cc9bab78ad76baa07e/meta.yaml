@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/55449214696a40cc9bab78ad76baa07e/artifacts
+deleted_time: 1758644129774
+end_time: 1758642672406
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 55449214696a40cc9bab78ad76baa07e
+run_name: LogisticRegression_Run_1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758642670344
+status: 3
+tags: []
+user_id: ronkecrown

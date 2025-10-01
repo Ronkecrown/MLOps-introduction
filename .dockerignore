@@ -1,0 +1,15 @@
+.git
+__pycache__/
+.venv/
+*.pyc
+app/ .env
+test_iris_pipeline.py
+README.md
+Preview day1.md
+mlflow_practice.py
+mlflow_practice_2.py
+manuallog_practice.py
+lab4_task_practice.py
+lab4_task_2.py
+iris.json.dvc
+iris_pipeline.py

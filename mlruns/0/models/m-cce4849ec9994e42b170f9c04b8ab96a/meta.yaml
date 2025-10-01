@@ -1,0 +1,10 @@
+artifact_location: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/models/m-cce4849ec9994e42b170f9c04b8ab96a/artifacts
+creation_timestamp: 1758645628957
+experiment_id: '0'
+last_updated_timestamp: 1758645631232
+model_id: m-cce4849ec9994e42b170f9c04b8ab96a
+model_type: null
+name: model
+source_run_id: abbaa6ba72f245ce9ad3240ff27b27e5
+status: 2
+status_message: null

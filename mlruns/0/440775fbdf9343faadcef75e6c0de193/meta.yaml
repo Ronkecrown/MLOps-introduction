@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ronkecrown/Documents/AMMI/MLOps-introduction/mlruns/0/440775fbdf9343faadcef75e6c0de193/artifacts
+deleted_time: 1758644202380
+end_time: 1758641923439
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 440775fbdf9343faadcef75e6c0de193
+run_name: fearless-bug-885
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758641920794
+status: 3
+tags: []
+user_id: ronkecrown
