@@ -2,11 +2,17 @@ name: Python CI workflow
 
 # Trigger workflow on push or pull request to main
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+    push:
+        branches:
+            - main
+        paths:
+            - '**/*.py'
+            - 'requirements.txt'
+            - '.github/workflows/**'
+    pull_request:
+        branches:
+            - main
+    workflow_dispatch:
 jobs:
   test:
     name: Run Tests
@@ -16,7 +22,7 @@ jobs:
     # Step 1: Checkout the repository
     - name: Checkout code
       uses: actions/checkout@v3
-
+git 
     # Step 2: Set up Python 3.11
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -32,6 +38,6 @@ jobs:
     # Step 4: Run tests using pytest
     - name: Run tests
       run: |
-        pytest
+          pytest
 
 
