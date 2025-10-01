@@ -1,9 +1,7 @@
-
 from unittest.mock import MagicMock
 import pytest
 from fastapi.testclient import TestClient
-
-from main import app
+from main import app, ml_models
 
 
 def test_root():
@@ -26,6 +24,15 @@ def test_list_models():
         assert response.status_code == 200
         assert response.json() == {"available_models": [
             "logistic_model", "rf_model"]}
+
+
+# Populate ml_models with mock objects for testing
+@pytest.fixture(autouse=True)
+def mock_ml_models():
+    ml_models["logistic_model"] = MagicMock()
+    ml_models["logistic_model"].predict.return_value = [1]
+    ml_models["rf_model"] = MagicMock()
+    ml_models["rf_model"].predict.return_value = [0]
 
 
 def test_predict_valid_model():
@@ -54,23 +61,11 @@ def test_predict_invalid_model():
                 "petal_width": 0.2,
             },
         )
-
         assert response.status_code == 422
 
 
-@pytest.fixture
-def mock_models(mocker):
-    mock_dict = {"logistic_model": MagicMock, "rf_model": MagicMock}
-    m = mocker.patch(
-        "app.main.ml_models",
-        return_value=mock_dict,
-    )
-    m.keys.return_value = mock_dict.keys()
-    return m
-
-
-def test_predict_mocked(mock_models):
-    mock_models["logistic_model"].predict.return_value = [-1]
+def test_predict_mocked():
+    ml_models["logistic_model"].predict.return_value = [-1]
 
     with TestClient(app) as client:
         response = client.post(
@@ -82,6 +77,5 @@ def test_predict_mocked(mock_models):
                 "petal_width": 0.2,
             },
         )
-
         assert response.status_code == 200
         assert response.json() == {"model": "logistic_model", "prediction": -1}
