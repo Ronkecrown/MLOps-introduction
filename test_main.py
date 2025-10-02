@@ -2,7 +2,9 @@ from unittest.mock import MagicMock
 import pytest
 from fastapi.testclient import TestClient
 
-from main import app, ml_models
+from main import app
+
+ml_models = {}
 
 
 @pytest.fixture(autouse=True)
